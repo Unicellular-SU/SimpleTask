@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">SimpleTask</string>
+    <string name="str_app_name">每日任务计划表</string>
+    <string name="str_add_task">添加任务</string>
+    <string name="str_today_task">今日任务</string>
+    <string name="str_history_task">历史任务</string>
+    <string name="str_setting">设置</string>
+
+    <string name="str_task_name">任务名</string>
+    <string name="str_task_context">任务详情</string>
+    <string name="str_task_time">执行时间</string>
+    <string name="str_task_tag">任务类型</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_today">Today</string>
+    <string name="title_add">Add</string>
+    <string name="title_history">History</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_communicate">更多</string>
+    <string name="title_share">分享</string>
+    <string name="title_about">关于</string>
+    <string name="str_give_yourself_task">给自己定个任务吧</string>
+    <string name="str_pick_time">选择时间</string>
+    <string name="str_pick_date">选择日期</string>
+    <string name="str_pick_repeat">不重复</string>
+    <string name="str_radio_normal">普通任务</string>
+    <string name="str_radio_remind">提醒任务</string>
+    <string name="str_radio_fixed">固定任务</string>
+    <string name="str_btn_add">添\t\t\t加</string>
+    <string name="str_error_no_name">你还没有输入任务名哦</string>
+    <string name="str_error_no_time">请选择时间</string>
+    <string name="str_error_early_time">不能选择过去时间</string>
+    <string name="str_error_no_task">今天还没有任务哟</string>
+    <string name="str_today">今天</string>
+    <string name="title_activity_left_navigation">LeftNavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

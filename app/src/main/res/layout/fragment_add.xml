@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="@dimen/dimen_add_oriented_margin_top"
+            android:layout_marginStart="@dimen/dimen_add_oriented_margin_left"
+            android:layout_marginEnd="@dimen/dimen_add_oriented_margin_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_name"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true">
+                    <ImageView
+                        android:layout_width="@dimen/dimen_icon_image_size"
+                        android:layout_height="@dimen/dimen_icon_image_size"
+                        android:src="@drawable/ic_notifications_black_24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_task_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_marginStart="@dimen/dimen_edit_margin_left"
+                        android:layout_marginEnd="@dimen/dimen_edit_margin_right"
+                        android:hint="@string/str_task_name"
+                        app:met_floatingLabelText="@string/str_give_yourself_task"
+                        app:met_floatingLabel="highlight"
+                        app:met_maxCharacters="15"
+                        app:met_errorColor="@color/red"
+                        app:met_clearButton= "true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_context"
+                    android:layout_below="@+id/ll_name"
+                    android:layout_alignParentStart="true">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/dimen_icon_image_size"
+                        android:layout_height="@dimen/dimen_icon_image_size"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="top"
+                        android:src="@drawable/context" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_task_context"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_edit_margin_left"
+                        android:layout_marginEnd="@dimen/dimen_edit_margin_right"
+                        android:hint="@string/str_task_context"
+                        android:maxLines="3"
+                        android:gravity="top"
+                        app:met_errorColor="@color/red"
+                        app:met_floatingLabel="highlight"
+                        app:met_maxCharacters="100" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_date"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/ll_context"
+                    android:layout_alignParentStart="true">
+                    <ImageView
+                        android:src="@drawable/date"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="@dimen/dimen_icon_image_size"
+                        android:layout_height="@dimen/dimen_icon_image_size" />
+                    <Button
+                        android:background="@color/colorAccent"
+                        android:id="@+id/btn_pick_date"
+                        android:text="@string/str_today"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_button_height"
+                        android:textSize="20sp"
+                        android:layout_marginStart="@dimen/dimen_edit_margin_left"
+                        android:layout_marginEnd="@dimen/dimen_edit_margin_right"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_time"
+                    android:layout_below="@+id/ll_date"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentStart="true">
+                    <ImageView
+                        android:src="@drawable/time"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="@dimen/dimen_icon_image_size"
+                        android:layout_height="@dimen/dimen_icon_image_size" />
+                    <Button
+                        android:background="@color/colorAccent"
+                        android:id="@+id/btn_pick_time"
+                        android:text="@string/str_pick_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_button_height"
+                        android:textSize="20sp"
+                        android:layout_marginStart="@dimen/dimen_edit_margin_left"
+                        android:layout_marginEnd="@dimen/dimen_edit_margin_right"/>
+                </LinearLayout>
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_repeat"
+                    android:layout_below="@+id/ll_time"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentStart="true">
+                    <ImageView
+                        android:src="@drawable/repeat"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="@dimen/dimen_icon_image_size"
+                        android:layout_height="@dimen/dimen_icon_image_size" />
+                    <Button
+                        android:background="@color/card_color_1"
+                        android:id="@+id/btn_pick_repeat"
+                        android:text="@string/str_pick_repeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_button_height"
+                        android:textSize="20sp"
+                        android:layout_marginStart="@dimen/dimen_edit_margin_left"
+                        android:layout_marginEnd="@dimen/dimen_edit_margin_right"/>
+                </LinearLayout>-->
+
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
