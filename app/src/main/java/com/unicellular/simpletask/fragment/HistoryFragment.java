@@ -34,6 +34,7 @@ import java.util.List;
 public class HistoryFragment extends Fragment{
     public static final int HISTORY_FRAGMENT=0x04;
     public static final String UPDATE_VIEW="HistoryFragment UpdateView";
+    public static HistoryFragment INSTANCE;
 
     private View view;
     private RecyclerView recyclerView;
@@ -55,6 +56,13 @@ public class HistoryFragment extends Fragment{
         }
     };
 
+
+    public static HistoryFragment getInstance(){
+        if (INSTANCE==null){
+            INSTANCE=new HistoryFragment();
+        }
+        return INSTANCE;
+    }
 
 
     @Nullable

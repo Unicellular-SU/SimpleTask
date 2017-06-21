@@ -39,6 +39,7 @@ import java.util.Date;
 
 public class AddFragment extends Fragment implements View.OnClickListener{
     public static final int ADD_FRAGMENT =0x01;
+    public static AddFragment INSTANCE;
     private MaterialEditText editTaskName;
     private MaterialEditText editTaskContext;
     private Button btnPickTime;
@@ -57,6 +58,13 @@ public class AddFragment extends Fragment implements View.OnClickListener{
 
     public static AddFragment addFragment;
 
+
+    public static AddFragment getInstance(){
+        if (INSTANCE==null){
+            INSTANCE=new AddFragment();
+        }
+        return INSTANCE;
+    }
 
 
     @Nullable

@@ -33,6 +33,7 @@ import java.util.List;
 public class TodayFragment extends Fragment{
     public static final int TODAY_FRAGMENT =0x00;
     public static final String UPDATE_VIEW="UpdateView";
+    public static TodayFragment INSTANCE;
 
     private OrientedViewPager mOrientedViewPager;
     private ContentFragmentAdapter mContentFragmentAdapter;
@@ -42,6 +43,14 @@ public class TodayFragment extends Fragment{
 
     private UpdateViewBroadCast broadCast;
     private int select=0;
+
+
+    public static TodayFragment getInstance(){
+        if (INSTANCE==null){
+            INSTANCE=new TodayFragment();
+        }
+        return INSTANCE;
+    }
 
     @Nullable
     @Override
@@ -55,6 +64,8 @@ public class TodayFragment extends Fragment{
     void refreshData(){
         SimpleTaskApplication.allTask.clear();
         SimpleTaskApplication.allTask=SimpleTaskApplication.taskDB.readDataByTime(new Date());
+
+
     }
     void initView(){
         fragments=new ArrayList<>();
@@ -72,6 +83,7 @@ public class TodayFragment extends Fragment{
 
 
         for (int i=0;i<SimpleTaskApplication.allTask.size();i++){
+            System.out.println(i);
             CardFragment cardFragment=CardFragment.newInstance(SimpleTaskApplication.allTask.get(i));
             fragments.add(cardFragment);
         }
